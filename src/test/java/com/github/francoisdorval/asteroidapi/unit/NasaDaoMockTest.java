@@ -19,6 +19,8 @@ import java.io.IOException;
 import java.nio.charset.Charset;
 import java.util.List;
 
+import static org.assertj.core.api.Assertions.assertThat;
+
 @SpringBootTest
 public class NasaDaoMockTest {
 
@@ -39,7 +41,7 @@ public class NasaDaoMockTest {
         Mockito.when(restTemplate.getForEntity(Mockito.anyString(), Mockito.eq(String.class))).thenReturn(responseEntity);
 
         List<NasaNearEarthObject> asteroids = nasaDao.getAsteroids("2021-01-28");
-       // Assert.assertEquals(11, asteroids.size());
+        assertThat(11).isEqualTo( asteroids.size());
     }
 
     @Test
@@ -51,10 +53,13 @@ public class NasaDaoMockTest {
         Mockito.when(restTemplate.getForEntity(Mockito.anyString(), Mockito.eq(String.class))).thenReturn(responseEntity);
 
         List<NasaNearEarthObject> asteroids = nasaDao.getAsteroids("2021-01-28");
-       // Assert.assertEquals(1, asteroids.size());
+        assertThat(1).isEqualTo( asteroids.size());
         NasaNearEarthObject neo = asteroids.get(0);
-        //Assert.assertEquals("89355 (2001 VS78)", neo.getName());
-       // Assert.assertEquals("2089355", neo.getId());
+        assertThat("89355 (2001 VS78)").isEqualTo(neo.getName());
+        assertThat("2089355").isEqualTo(neo.getId());
+        assertThat("71959206.657176708").isEqualTo( neo.getCloseApproachData().get(0).getMissDistance().getKilometers());
+
+        // Assert.assertEquals("2089355", neo.getId());
        // Assert.assertEquals("71959206.657176708", neo.getCloseApproachData().get(0).getMissDistance().getKilometers());
 
     }

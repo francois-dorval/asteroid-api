@@ -8,6 +8,9 @@ import org.springframework.boot.web.server.LocalServerPort;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.web.client.RestTemplate;
 
+import static org.assertj.core.api.Assertions.assertThat;
+
+
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 @ActiveProfiles("mock")
 public class ComponentTest {
@@ -19,10 +22,9 @@ public class ComponentTest {
 
     @Test
     public void test_Get_Asteroids() {
-        RestTemplate restTemplate = new RestTemplate();
-        String result = restTemplate.getForObject("http://localhost:" + port + "/asteroids",
+        String result = new RestTemplate().getForObject("http://localhost:" + port + "/asteroids",
                 String.class);
         LOG.info("result : "+result);
-       // Assert.assertTrue(result.contains("MOCKID"));
+        assertThat(result.contains("Asteromachin")).isTrue();
     }
 }

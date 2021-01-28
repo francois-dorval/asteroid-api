@@ -6,6 +6,9 @@ Une brique qui va lire les données de la NASA sur les géocroiseurs et les conv
 
 Importez le projet dans gradle
 Pour utiliser des fausses données, lancez le projet avec le profil spring "mock"
+./gradlew bootRun --args='--spring.profiles.active=mock'
+
+
 
 ## TODO
 - faire un joli front
