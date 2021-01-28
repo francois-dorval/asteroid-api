@@ -3,7 +3,6 @@ plugins {
 	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
 	id 'java'
 	id 'war'
-	id "org.sonarqube" version "3.0"
 
 }
 
