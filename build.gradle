@@ -37,3 +37,9 @@ test {
 war {
 	enabled=true
 }
+
+jacocoTestReport {
+	reports {
+		xml.enabled true
+	}
+}
