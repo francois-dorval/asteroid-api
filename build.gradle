@@ -7,7 +7,7 @@ plugins {
 
 group = 'com.github.francois-dorval'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '11'
+sourceCompatibility = '9'
 
 repositories {
 	mavenCentral()
