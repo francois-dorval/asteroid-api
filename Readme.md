@@ -8,10 +8,13 @@ Importez le projet dans gradle
 Le programme à lancer est gradlew, le wrapper gradle. En principe il s'occupe d'installer la bonne version de gradle et de préparer le projet.
 Sous windows, c'est gradle.bat
 
-Pour utiliser des fausses données, lancez le projet avec le profil spring "mock"
+Pour compiler
+./gradlew build
+
+Pour lancer le projet avec données fictives, lancez le projet avec le profil spring "mock"
 ./gradlew bootRun --args='--spring.profiles.active=mock'
 
-Pour le lancer avec des données du monde réel :
+Pour le lancer avec des données du monde réel (n'abusez pas trop sinon mon token sera bloqué)
 ./gradlew bootRun
 
 (remplacer le gradlew par gradlew.bat pour windows)
