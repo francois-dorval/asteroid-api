@@ -59,9 +59,6 @@ public class NasaDaoMockTest {
         assertThat("2089355").isEqualTo(neo.getId());
         assertThat("71959206.657176708").isEqualTo( neo.getCloseApproachData().get(0).getMissDistance().getKilometers());
 
-        // Assert.assertEquals("2089355", neo.getId());
-       // Assert.assertEquals("71959206.657176708", neo.getCloseApproachData().get(0).getMissDistance().getKilometers());
-
     }
 
 }

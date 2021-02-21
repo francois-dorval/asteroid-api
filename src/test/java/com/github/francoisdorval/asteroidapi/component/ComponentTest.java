@@ -10,7 +10,6 @@ import org.springframework.web.client.RestTemplate;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 @ActiveProfiles("mock")
 public class ComponentTest {
@@ -26,5 +25,7 @@ public class ComponentTest {
                 String.class);
         LOG.info("result : "+result);
         assertThat(result.contains("Asteromachin")).isTrue();
+        assertThat(result.contains("Pfouloulou encore une erreur")).isTrue();
+
     }
 }
