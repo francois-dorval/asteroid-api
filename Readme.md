@@ -5,10 +5,16 @@ Une brique qui va lire les données de la NASA sur les astéroides géocroiseurs
 ## utilisation
 
 Importez le projet dans gradle
+Le programme à lancer est gradlew, le wrapper gradle. En principe il s'occupe d'installer la bonne version de gradle et de préparer le projet.
+Sous windows, c'est gradle.bat
+
 Pour utiliser des fausses données, lancez le projet avec le profil spring "mock"
 ./gradlew bootRun --args='--spring.profiles.active=mock'
+
 Pour le lancer avec des données du monde réel :
 ./gradlew bootRun
+
+(remplacer le gradlew par gradlew.bat pour windows)
 
 ## IHM
 Y'en pas! Tout ce que vous verrez, c'est une page générée qui permet d'interagir avec le back.
