@@ -24,8 +24,7 @@ public class ComponentTest {
         String result = new RestTemplate().getForObject("http://localhost:" + port + "/asteroids",
                 String.class);
         LOG.info("result : "+result);
-        assertThat(result.contains("Asteromachin")).isFalse();
-        assertThat(result.contains("Pfouloulou encore une erreur")).isFalse();
+        assertThat(result.contains("Asteromachin")).isTrue();
 
     }
 }
