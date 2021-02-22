@@ -1,9 +1,9 @@
 plugins {
-	id 'org.springframework.boot' version '2.4.2'
-	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
-	id 'java'
-	id 'war'
-	id 'jacoco'
+    id 'org.springframework.boot' version '2.4.2'
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+    id 'java'
+    id 'war'
+    id 'jacoco'
 
 }
 
@@ -12,34 +12,36 @@ version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '9'
 
 repositories {
-	mavenCentral()
+    mavenCentral()
 }
 
 dependencies {
-	implementation 'org.springframework.boot:spring-boot-starter-web'
-	implementation 'org.springdoc:springdoc-openapi-ui:1.5.2'
-	implementation group: 'com.jayway.jsonpath', name: 'json-path', version: '2.0.0'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springdoc:springdoc-openapi-ui:1.5.2'
+    implementation 'com.jayway.jsonpath:json-path:2.0.0'
+    implementation 'com.sun.xml.bind:jaxb-osgi:2.3.2'
 
-	providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
+    providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
 
-	testImplementation group: 'org.hamcrest', name: 'hamcrest', version: '2.1'
-	testImplementation group: 'io.rest-assured', name: 'rest-assured', version: '3.3.0'
-	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation 'org.hamcrest:hamcrest:2.1'
+    testImplementation 'io.rest-assured:rest-assured:4.3.2'
 
+    testImplementation 'io.rest-assured:json-path:4.3.2'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
 
 
 }
 
 test {
-	useJUnitPlatform()
+    useJUnitPlatform()
 }
 
 war {
-	enabled=true
+    enabled = true
 }
 
 jacocoTestReport {
-	reports {
-		xml.enabled true
-	}
+    reports {
+        xml.enabled true
+    }
 }
