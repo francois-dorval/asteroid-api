@@ -1,0 +1,8 @@
+com/github/francoisdorval/asteroidapi/unit/DateUtilTest.java
+ com.github.francoisdorval.asteroidapi.unit.DateUtilTest
+com/github/francoisdorval/asteroidapi/unit/NasaDaoMockTest.java
+ com.github.francoisdorval.asteroidapi.unit.NasaDaoMockTest
+com/github/francoisdorval/asteroidapi/AsteroidApiApplicationTests.java
+ com.github.francoisdorval.asteroidapi.AsteroidApiApplicationTests
+com/github/francoisdorval/asteroidapi/component/ComponentTest.java
+ com.github.francoisdorval.asteroidapi.component.ComponentTest
