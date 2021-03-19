@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Main-Class: org.springframework.boot.loader.WarLauncher
+Start-Class: com.github.francoisdorval.asteroidapi.AsteroidApiApplicatio
+ n
+Spring-Boot-Version: 2.4.2
+Spring-Boot-Classes: WEB-INF/classes/
+Spring-Boot-Lib: WEB-INF/lib/
+
