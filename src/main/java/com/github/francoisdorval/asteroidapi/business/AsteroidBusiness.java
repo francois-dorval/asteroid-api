@@ -27,4 +27,3 @@ public class AsteroidBusiness {
 }
 
 
-ceci est une erreur, ça n'a rien à faire ici
