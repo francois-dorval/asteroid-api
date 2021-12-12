@@ -20,6 +20,8 @@ dependencies {
     implementation 'org.springdoc:springdoc-openapi-ui:1.5.2'
     implementation 'com.jayway.jsonpath:json-path:2.0.0'
     implementation 'com.sun.xml.bind:jaxb-osgi:2.3.2'
+    implementation 'org.springframework.boot:spring-boot-starter-actuator'
+
 
     providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
 
