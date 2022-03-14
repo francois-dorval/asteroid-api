@@ -8,7 +8,7 @@ public class AsteroidApiApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(AsteroidApiApplication.class, args);
-		coucou
+		
 	}
 
 }
