@@ -27,7 +27,7 @@ public class AsteroidController {
     @Autowired
     AsteroidBusiness asteroidBusiness;
 
-    @Operation(summary = "Get all asteroids near earth tomorrow", description = "Name, id, distance", tags = { "danger!" })
+    @Operation(summary = "Get all asteroids near earth tomorrow", description = "Name, id, distance")
 
     @RequestMapping(value = "/asteroids", method = RequestMethod.GET)
     @CrossOrigin()
@@ -35,5 +35,12 @@ public class AsteroidController {
         return new ResponseEntity<>(asteroidBusiness.getAsteroidsForTomorrow(), HttpStatus.OK);
     }
 
+    @Operation(summary = "See if we are in danger tomorrow", description = "\uD83D\uDE31")
+
+    @RequestMapping(value = "/asteroid-danger", method = RequestMethod.GET)
+    @CrossOrigin()
+    public ResponseEntity<Boolean> areWeInDanger()   {
+        return new ResponseEntity<>(asteroidBusiness.areWeInDanger(), HttpStatus.OK);
+    }
 
 }
