@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.web.server.LocalServerPort;
+import org.springframework.boot.test.web.server.LocalServerPort;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.web.client.RestTemplate;
 
@@ -27,4 +27,14 @@ public class ComponentTest {
         assertThat(result.contains("Asteromachin")).isTrue();
 
     }
+
+    @Test
+    public void test_Get_Danger() {
+        Boolean result = new RestTemplate().getForObject("http://localhost:" + port + "/asteroid-danger",
+                Boolean.class);
+        LOG.info("result : "+result);
+        assertThat(result).isTrue();
+
+    }
+
 }
